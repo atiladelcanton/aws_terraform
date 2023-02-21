@@ -6,7 +6,6 @@ terraform {
       version = "4.55.0"
     }
   }
-
 }
 
 provider "aws" {
@@ -19,6 +18,8 @@ resource "aws_s3_bucket" "b" {
   tags = {
     Name        = "My Bucket"
     Environment = "Dev"
+    ManagedBy   = "Terraform"
+    Owner       = "Atila Rampazo"
   }
 }
 
